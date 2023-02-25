@@ -4,6 +4,7 @@ import DayList from "./DayList";
 import Appointment from "./Appointment";
 import axios from "axios";
 import { getAppointmentsForDay, getInterview } from "helpers/selectors";
+import { getInterviewersForDay } from "helpers/selectors";
 
 
 export default function Application(props) {
@@ -26,7 +27,8 @@ export default function Application(props) {
   }, [])
   
   const appointments = getAppointmentsForDay(state, state.day);
-  // console.log("appointments:", state, appointments)
+  const interviewers = getInterviewersForDay(state, state.day);
+  
   const schedule = appointments.map((appointment) => {
     const interview = getInterview(state, appointment.interview);
       return (
@@ -35,9 +37,12 @@ export default function Application(props) {
           id={appointment.id}
           time={appointment.time}
           interview={interview}
+          interviewers={interviewers}
         />
       );
   });
+
+  
   return (
     <main className="layout">
       
