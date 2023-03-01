@@ -1,4 +1,8 @@
-# Interview Scheduler
+# Interview Scheduler Project
+
+## What is Interview Scheduler?
+
+A web app designed to allow the user to book, edit and delete appointments with an interviewer of their choice on different days of the week within a specific timeframe
 
 ## Setup
 

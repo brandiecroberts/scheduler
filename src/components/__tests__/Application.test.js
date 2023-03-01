@@ -155,10 +155,10 @@ describe("Application", () => {
     fireEvent.click(getByText(appointment, "Confirm"));
 
     await waitForElement(() => getByAltText(appointment, "Add"));
-    
+
     const day = getAllByTestId(container, "day").find((day) =>
-    queryByText(day, "Monday")
-  );
+      queryByText(day, "Monday")
+    );
     expect(getByText(day, "2 spots remaining")).toBeInTheDocument();
   });
 });

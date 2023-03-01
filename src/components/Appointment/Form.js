@@ -6,7 +6,7 @@ export default function Form(props) {
   const [name, setName] = useState(props.name || "");
   const [interviewer, setInterviewer] = useState(props.interviewer || null);
   const [error, setError] = useState("");
-  // console.log(student, interviewer);
+
   function reset() {
     setName("");
     setInterviewer(null);
@@ -15,10 +15,6 @@ export default function Form(props) {
     reset();
     props.onCancel();
   }
-
-  // function save() {
-  //   props.onSave(student, interviewer);
-  // }
 
   function validate() {
     if (name === "") {
