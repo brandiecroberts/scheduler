@@ -26,6 +26,8 @@ npm test
 npm run storybook
 ```
 
+## Dependancies
+
 ## Project Screenshots
 
 !["Home page for the scheduler app"](https://github.com/brandiecroberts/scheduler/blob/master/docs/appointment-form.png?raw=true)

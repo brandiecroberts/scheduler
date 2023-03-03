@@ -25,6 +25,7 @@ export default function useApplicationData() {
     });
   }, []);
 
+  // Updates the spot counter when appointments are booked/deleted
   function updateSpots(id, appointments) {
     let counter = 0;
     const day = state.days.find((element) => {
