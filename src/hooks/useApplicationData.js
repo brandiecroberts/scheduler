@@ -26,6 +26,8 @@ export default function useApplicationData() {
   }, []);
 
   // Updates the spot counter when appointments are booked/deleted
+  // @param (id, appointments)
+  // @returns updatedDays when appointment is booked/deleted
   function updateSpots(id, appointments) {
     let counter = 0;
     const day = state.days.find((element) => {
@@ -43,6 +45,9 @@ export default function useApplicationData() {
     return updatedDays;
   }
 
+  // Returns the axios path to book a new interview
+  // @params (id, interview)
+  // @returns appointment booked on specific day
   function bookInterview(id, interview) {
     const appointment = {
       ...state.appointments[id],
@@ -61,6 +66,9 @@ export default function useApplicationData() {
       });
   }
 
+  // Returns axios path for deleting an existing interview
+  // @params (id) which finds the interview being deleted by the id
+  // @returns appointment deleted
   function cancelInterview(id) {
     const appointment = {
       ...state.appointments[id],
